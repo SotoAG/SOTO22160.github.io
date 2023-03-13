@@ -2,9 +2,16 @@
 <html>
 <head>
 <title>AR.js A-Frame Location-based</title>
+    
+<!-- A-Frame itself -->
 <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-<script type='text/javascript' src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
-<script type='text/javascript' src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+
+<!-- Pure three.js code that the A-Frame components use for location-based AR -->
+<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
+
+<!-- AR.js A-Frame components -->
+<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
+
 </head>
 <body>
 
@@ -13,11 +20,13 @@
             <a-asset-item id="model-obj" src="https://raw.githubusercontent.com/SotoAG/SOTO22160.github.io/main/434440_EXPANSION_JOINT.obj"></a-asset-item>
             <a-asset-item id="model-mtl" src="https://raw.githubusercontent.com/SotoAG/SOTO22160.github.io/main/434440_EXPANSION_JOINT.mtl"></a-asset-item>
     </a-assets>
+    <a-camera gps-new-camera='gpsMinDistance: 1'></a-camera>
     <a-entity
         obj-model="obj: #model-obj; mtl: #model-mtl"
+        position 
         gps-new-entity-place="latitude: -34.45519851102956; longitude: 150.84487404583697">
     </a-entity>
-    <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
+    
 </a-scene>
 </body>
 </html>
