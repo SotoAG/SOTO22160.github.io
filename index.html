@@ -7,18 +7,19 @@
 <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
 </head>
 <body>
-<a-assets>
+
+<a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
+    <a-assets>
             <a-asset-item id="model-obj" src="https://raw.githubusercontent.com/SotoAG/SOTO22160.github.io/main/434440_EXPANSION_JOINT.obj"></a-asset-item>
             <a-asset-item id="model-mtl" src="https://raw.githubusercontent.com/SotoAG/SOTO22160.github.io/main/434440_EXPANSION_JOINT.mtl"></a-asset-item>
-</a-assets>
-<a-scene vr-mode-ui='enabled: true' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
-    <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
-    
+    </a-assets>
     <a-entity
         obj-model="obj: #model-obj; mtl: #model-mtl"
         gps-new-entity-place="latitude: -34.4552637551482; longitude: 150.84496188817505"
-        scale="1 1 1">
+        position ="0 1 0"
     </a-entity>
+            
+    <a-camera gps-new-camera='gpsMinDistance: 1'></a-camera>
 </a-scene>
 </body>
 </html>
