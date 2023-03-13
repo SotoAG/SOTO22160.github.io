@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
+<a-scene vr-mode-ui='enabled: true' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
     <a-assets>
             <a-asset-item id="model-obj" src="https://raw.githubusercontent.com/SotoAG/SOTO22160.github.io/main/401-0206%20DOWNCOMER.obj"></a-asset-item>
             <a-asset-item id="model-mtl" src="https://raw.githubusercontent.com/SotoAG/SOTO22160.github.io/main/401-0206%20DOWNCOMER.mtl"></a-asset-item>
@@ -23,8 +23,8 @@
     <a-camera gps-new-camera='gpsMinDistance: 1'></a-camera>
     <a-entity
         obj-model="obj: #model-obj; mtl: #model-mtl"
-        rotation="0 180 0"
-        position="0 -38 0"
+        scale="0.5 0.5 0.5"
+        position="0 -20 0"
         gps-new-entity-place="latitude: -34.45519851102956; longitude: 150.84487404583697">
     </a-entity>
     
