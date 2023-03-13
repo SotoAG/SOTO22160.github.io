@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>AR.js A-Frame Location-based</title>
+    <title>AR.js A-Frame Location-based</title>
     
-<!-- A-Frame itself -->
-<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <!-- A-Frame itself -->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 
-<!-- Pure three.js code that the A-Frame components use for location-based AR -->
-<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
+    <!-- Pure three.js code that the A-Frame components use for location-based AR -->
+    <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
 
-<!-- AR.js A-Frame components -->
-<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
+    <!-- AR.js A-Frame components -->
+    <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
 
 </head>
 <body>
 
-<a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: true' renderer='antialias: true; alpha: true'>
+<a-scene vr-mode-ui='enabled: true' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
     <a-assets>
             <a-asset-item id="model-obj" src="https://raw.githubusercontent.com/SotoAG/SOTO22160.github.io/main/434440_EXPANSION_JOINT.obj"></a-asset-item>
             <a-asset-item id="model-mtl" src="https://raw.githubusercontent.com/SotoAG/SOTO22160.github.io/main/434440_EXPANSION_JOINT.mtl"></a-asset-item>
@@ -23,7 +23,8 @@
     <a-camera gps-new-camera='gpsMinDistance: 1'></a-camera>
     <a-entity
         obj-model="obj: #model-obj; mtl: #model-mtl"
-        position="1 1.5 1"
+        rotation="0 180 0"
+        position="0 1.5 0"
         gps-new-entity-place="latitude: -34.45519851102956; longitude: 150.84487404583697">
     </a-entity>
     
