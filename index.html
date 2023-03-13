@@ -12,8 +12,7 @@
         <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
             
         <a-assets>
-            <a-asset-item id="Model_obj" src="https://raw.githubusercontent.com/SotoAG/SOTO22160.github.io/main/434440_EXPANSION_JOINT.obj"></a-asset-item>
-            <a-asset-item id="Model_mtl" src="https://raw.githubusercontent.com/sotoag/soto22160.github.io/main/434440_EXPANSION_JOINT.mtl"></a-asset-item>
+            <a-asset-item id="Model_obj" src="https://raw.githubusercontent.com/SotoAG/SOTO22160.github.io/main/434440_EXPANSION_JOINT.gltf"></a-asset-item>
         </a-assets>
 
         <a-marker type='barcode' value='7'>
@@ -22,7 +21,7 @@
 
         <a-marker type='barcode' value='6'>
             <a-entity
-                obj-model="obj: #Model_obj; mtl: #Model_mtl"
+                glft-model="#Model_obj"
                 scale="0.01 0.01 0.01"
             </a-entity>
         </a-marker>
